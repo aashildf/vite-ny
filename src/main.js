@@ -5,14 +5,14 @@ window.addEventListener("DOMContentLoaded", () => {
     {
       id: uuidv4(),
       title: "Kapittel 1",
-      text: "Det var en gang...",
+      text: "Det var en gang i Bergen...",
       image: "/vite-ny/girl_and_dog.png",
     },
 
     {
       id: uuidv4(),
       title: "Kapittel 2",
-      text: "Så skjedde det noe...",
+      text: "Eller forresten... det regner jo alltid i Bergen!",
       image: "/vite-ny/umbrella.png",
     },
   ];

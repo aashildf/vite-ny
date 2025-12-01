@@ -16,14 +16,14 @@ button{
   margin: 0 10px;
   padding: 8px 16px;
   border: none;
-  background: #e55a9d;
+  background: #6e113e;
   color: white;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #730d58;
+  background: #1d0316;
 }
 
 h1, p{
