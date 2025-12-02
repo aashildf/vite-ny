@@ -1,9 +1,75 @@
 
-body {
-  font-family: sans-serif;
-  color: rgb(16, 15, 15);
-  background-color: bisque;
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap');
+
+:root {
+  /* colors */
+  --body-bg: #c9bebe;
+  --page-bg: #F5F5F5;
+  --button:#6d6b8c;
+  --button-hover:#3c368e;
+  --dark-text: #2A2935;
+  
+
+  
+  /* fonts */
+  --book-title: 'Tulpen One', sans-serif;
+  --title: 'Cormorant Garamond', serif;
+  --body: 'Cormorant Garamond', serif;
+  --base-size: var(--baseline) * 1.2;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+ 
+}
+
+#app {
+  display: flex;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  box-shadow:  0 0 100px rgba(0, 0, 0, .3);
+  background: #f5f5f5;
+  position: relative;
+}
+
+/* Midtlinje som deler sidene */
+#app::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
+  z-index: 5;
+}
+
+.page {
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page:first-child {
+  box-shadow: inset -10px 0 20px rgba(0,0,0,0.1);
+}
+
+.page:last-child {
+  box-shadow: inset 10px 0 20px rgba(0,0,0,0.1);
+}
+
+.page h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
 
 .controls{
   text-align: center;
@@ -16,21 +82,21 @@ button{
   margin: 0 10px;
   padding: 8px 16px;
   border: none;
-  background: #6e113e;
-  color: white;
+  background: var(--button);
+  color: var(--body-bg);
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #1d0316;
+  background:   var(--button-hover);
 }
 
 h1, p{
   text-align: center;
 }
 
-.illustration{
+.page img{
   width: 200px;
   height: auto;
    display: block;

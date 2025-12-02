@@ -26,26 +26,18 @@ window.addEventListener("DOMContentLoaded", () => {
     // tøm kontainer
     app.innerHTML = "";
 
-    // lage elementene
-    const h1 = document.createElement("h1");
-    h1.id = uuidv4();
+    // høyre og venstre side i boken
+    const left = document.createElement("div");
+    left.className = "page";
+    left.innerHTML = `<h1>${page.title}</h1><p>${page.text}</p>`;
 
-    h1.className = "title";
-    h1.textContent = page.title;
+    const right = document.createElement("div");
+    right.className = "page";
+    right.innerHTML = `<img src="${page.image}" alt="">`;
 
-    const p = document.createElement("p");
-    p.id = uuidv4();
-    p.className = "story";
-    p.textContent = page.text;
+    app.appendChild(left);
+    app.appendChild(right);
 
-    const img = document.createElement("img");
-    img.id = uuidv4();
-    img.className = "illustration";
-    img.src = page.image;
-
-    app.appendChild(h1);
-    app.appendChild(p);
-    app.appendChild(img);
   }
 
   // vis første side
